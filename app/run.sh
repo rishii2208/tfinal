@@ -6,10 +6,9 @@ set -e
 # Replace this with your command to run all tests
 run_all_tests() {
   echo "Running all tests..."
-  # Symlink backend into eval_assets so conftest.py path resolution works
+  # Symlink backend and tests into eval_assets so conftest.py path resolution works
   ln -sf /app/backend /eval_assets/backend 2>/dev/null || true
-  # Install any additional deps if requirements file exists
-  pip install -r /app/backend/requirements.txt 2>/dev/null || true
+  ln -sf /app/tests /eval_assets/tests 2>/dev/null || true
   # Run pytest from eval_assets where tests are extracted
   cd /eval_assets
   python -m pytest tests/ -v --tb=short > /eval_assets/_pytest_stdout.txt 2> /eval_assets/_pytest_stderr.txt || true
