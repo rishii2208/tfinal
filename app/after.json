@@ -1,0 +1,536 @@
+{
+  "tests": [
+    {
+      "name": "tests/test_app_factory.py::TestCreateApp::test_create_app_returns_flask_instance",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_app_factory.py::TestCreateApp::test_create_app_has_test_client",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_app_factory.py::TestCreateApp::test_create_app_seeds_inventory",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_app_factory.py::TestCreateApp::test_create_app_registers_recipe_routes",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_app_factory.py::TestCreateApp::test_create_app_registers_batch_routes",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_app_factory.py::TestCreateApp::test_create_app_registers_order_routes",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_app_factory.py::TestCreateApp::test_create_app_registers_dashboard_route",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_success",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_returns_computed_fields",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_cost_per_bar_calculation",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_multiplier_below_0_5",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_multiplier_above_10",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_multiplier_at_0_5",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_multiplier_at_10",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_insufficient_inventory",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestCreateBatch::testcreate_batch_nonexistent_recipe",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestGetBatches::test_get_batches_empty",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestGetBatches::test_get_batches_returns_all",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestGetBatchById::test_get_batch_by_id",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestGetBatchById::test_get_batch_not_found",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_valid_transition_mixed_to_molded",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_valid_transition_molded_to_unmolded",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_valid_transition_unmolded_to_curing",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_valid_transition_curing_to_ready_cold_process",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_skip_stage_returns_400",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_backward_transition_returns_400",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_invalid_status_value_returns_400",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_status_update_batch_not_found",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_cure_time_not_met_cold_process",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_cure_time_met_hot_process",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_cure_time_not_met_hot_process",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestBatchStatusTransitions::test_cure_time_melt_and_pour_immediate",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestDeleteBatch::test_delete_mixed_batch",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestDeleteBatch::test_delete_molded_batch",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestDeleteBatch::test_delete_unmolded_batch",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestDeleteBatch::test_delete_curing_batch_returns_400",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestDeleteBatch::test_delete_ready_batch_returns_400",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_batches.py::TestDeleteBatch::test_delete_batch_not_found",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateLye::test_single_oil",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateLye::test_multiple_oils",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateLye::test_rounding",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateAdjustedLye::test_basic",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateAdjustedLye::test_min_superfat",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateAdjustedLye::test_max_superfat",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateWater::test_basic",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateWater::test_custom_ratio",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateBatchWeight::test_basic",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateBatchWeight::test_with_multiplier",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateCostPerBar::test_basic",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateCostPerBar::test_zero_bars_returns_zero",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateWholesaleTotal::test_single_item",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_calculations.py::TestCalculateWholesaleTotal::test_multiple_items",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardStructure::test_dashboard_returns_200",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_batches_by_stage",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_curing_timeline",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_inventory_levels",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_wholesale_orders",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_cost_analysis",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_revenue",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardBatchesByStage::test_all_stages_zero_initially",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardBatchesByStage::test_counts_mixed_batch",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardCuringTimeline::test_curing_timeline_entry_fields",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardCuringTimeline::test_curing_timeline_days_remaining",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardCuringTimeline::test_curing_timeline_empty_when_no_curing_batches",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardInventoryLevels::test_inventory_levels_count",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardInventoryLevels::test_inventory_levels_has_low_stock_flag",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardWholesaleOrders::test_wholesale_order_fields",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardCostAnalysis::test_cost_analysis_with_batch",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardCostAnalysis::test_cost_analysis_empty_without_batches",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardCostAnalysis::test_cost_analysis_avg_across_multiple_batches",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardRevenue::test_revenue_zero_with_no_orders",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_dashboard.py::TestDashboardRevenue::test_revenue_sums_all_orders",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventorySeeding::test_inventory_has_11_items",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventorySeeding::test_inventory_contains_all_sap_oils",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventorySeeding::test_inventory_contains_sodium_hydroxide",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventorySeeding::test_inventory_initial_quantity_zero",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventorySeeding::test_inventory_initial_cost_zero",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestGetInventory::test_get_inventory_includes_low_stock_flag",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestGetInventory::test_get_inventory_item_fields",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestUpdateInventory::test_update_inventory_quantity_and_cost",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestUpdateInventory::test_update_inventory_not_found",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventoryDecrement::test_oil_inventory_decremented_on_batch",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventoryDecrement::test_sodium_hydroxide_decremented_on_batch",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventoryDecrement::test_insufficient_oil_inventory_returns_400",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestInventoryDecrement::test_insufficient_sodium_hydroxide_returns_400",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestLowStockFlag::test_low_stock_true_when_below_recipe_requirement",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestLowStockFlag::test_low_stock_false_when_sufficient",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestLowStockFlag::test_low_stock_for_sodium_hydroxide",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_inventory.py::TestLowStockFlag::test_low_stock_false_no_recipes",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_orders.py::TestCreateOrder::test_create_order_success",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_orders.py::TestCreateOrder::test_create_order_total_computation",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_orders.py::TestCreateOrder::test_create_order_exceeds_available_inventory",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_orders.py::TestCreateOrder::test_create_order_available_inventory_considers_existing_orders",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_orders.py::TestCreateOrder::test_create_order_no_ready_batches",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_orders.py::TestGetOrders::test_get_orders_empty",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_orders.py::TestGetOrders::test_get_orders_returns_all",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_orders.py::TestGetOrders::test_get_orders_includes_total",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_success",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_computes_total_lye",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_computes_adjusted_lye",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_computes_water",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_defaults_to_2",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_invalid_process_type",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_cold_process_valid",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_hot_process_valid",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_melt_and_pour_valid",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_unrecognized_oil_name",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_zero_weight_oz",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_negative_weight_oz",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_superfat_below_3",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_superfat_above_10",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_superfat_at_3",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_superfat_at_10",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_below_1_5",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_above_3",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_at_1_5",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_at_3",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestGetRecipes::test_get_recipes_empty",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestGetRecipes::test_get_recipes_returns_all",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestGetRecipes::test_get_recipes_includes_computed_fields",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestGetRecipeById::test_get_recipe_by_id",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_recipes.py::TestGetRecipeById::test_get_recipe_not_found",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_contains_exactly_10_entries",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_olive_oil",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_coconut_oil",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_palm_oil",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_shea_butter",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_castor_oil",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_sweet_almond_oil",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_avocado_oil",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_sunflower_oil",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_cocoa_butter",
+      "status": "PASSED"
+    },
+    {
+      "name": "tests/test_sap_config.py::TestSAPValues::test_sap_values_jojoba_oil",
+      "status": "PASSED"
+    }
+  ]
+}

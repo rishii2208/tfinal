@@ -1,0 +1,213 @@
+Running all tests...
+Requirement already satisfied: Flask==3.0.0 in /usr/local/lib/python3.10/dist-packages (from -r /app/backend/requirements.txt (line 1)) (3.0.0)
+Requirement already satisfied: Flask-SQLAlchemy==3.1.1 in /usr/local/lib/python3.10/dist-packages (from -r /app/backend/requirements.txt (line 2)) (3.1.1)
+Requirement already satisfied: flask-cors==4.0.0 in /usr/local/lib/python3.10/dist-packages (from -r /app/backend/requirements.txt (line 3)) (4.0.0)
+Requirement already satisfied: pytest==7.4.4 in /usr/local/lib/python3.10/dist-packages (from -r /app/backend/requirements.txt (line 4)) (7.4.4)
+Requirement already satisfied: itsdangerous>=2.1.2 in /usr/local/lib/python3.10/dist-packages (from Flask==3.0.0->-r /app/backend/requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: Jinja2>=3.1.2 in /usr/local/lib/python3.10/dist-packages (from Flask==3.0.0->-r /app/backend/requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.10/dist-packages (from Flask==3.0.0->-r /app/backend/requirements.txt (line 1)) (8.3.1)
+Requirement already satisfied: Werkzeug>=3.0.0 in /usr/local/lib/python3.10/dist-packages (from Flask==3.0.0->-r /app/backend/requirements.txt (line 1)) (3.1.7)
+Requirement already satisfied: blinker>=1.6.2 in /usr/local/lib/python3.10/dist-packages (from Flask==3.0.0->-r /app/backend/requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: sqlalchemy>=2.0.16 in /usr/local/lib/python3.10/dist-packages (from Flask-SQLAlchemy==3.1.1->-r /app/backend/requirements.txt (line 2)) (2.0.48)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from pytest==7.4.4->-r /app/backend/requirements.txt (line 4)) (26.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /usr/local/lib/python3.10/dist-packages (from pytest==7.4.4->-r /app/backend/requirements.txt (line 4)) (1.6.0)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.10/dist-packages (from pytest==7.4.4->-r /app/backend/requirements.txt (line 4)) (2.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from pytest==7.4.4->-r /app/backend/requirements.txt (line 4)) (2.4.1)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8 in /usr/local/lib/python3.10/dist-packages (from pytest==7.4.4->-r /app/backend/requirements.txt (line 4)) (1.3.1)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from exceptiongroup>=1.0.0rc8->pytest==7.4.4->-r /app/backend/requirements.txt (line 4)) (4.15.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from Jinja2>=3.1.2->Flask==3.0.0->-r /app/backend/requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: greenlet>=1 in /usr/local/lib/python3.10/dist-packages (from sqlalchemy>=2.0.16->Flask-SQLAlchemy==3.1.1->-r /app/backend/requirements.txt (line 2)) (3.3.2)
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.6.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /eval_assets
+collecting ... collected 133 items
+
+tests/test_app_factory.py::TestCreateApp::test_create_app_returns_flask_instance PASSED [  0%]
+tests/test_app_factory.py::TestCreateApp::test_create_app_has_test_client PASSED [  1%]
+tests/test_app_factory.py::TestCreateApp::test_create_app_seeds_inventory PASSED [  2%]
+tests/test_app_factory.py::TestCreateApp::test_create_app_registers_recipe_routes PASSED [  3%]
+tests/test_app_factory.py::TestCreateApp::test_create_app_registers_batch_routes PASSED [  3%]
+tests/test_app_factory.py::TestCreateApp::test_create_app_registers_order_routes PASSED [  4%]
+tests/test_app_factory.py::TestCreateApp::test_create_app_registers_dashboard_route PASSED [  5%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_success PASSED  [  6%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_returns_computed_fields PASSED [  6%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_cost_per_bar_calculation PASSED [  7%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_multiplier_below_0_5 PASSED [  8%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_multiplier_above_10 PASSED [  9%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_multiplier_at_0_5 PASSED [  9%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_multiplier_at_10 PASSED [ 10%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_insufficient_inventory PASSED [ 11%]
+tests/test_batches.py::TestCreateBatch::testcreate_batch_nonexistent_recipe PASSED [ 12%]
+tests/test_batches.py::TestGetBatches::test_get_batches_empty PASSED     [ 12%]
+tests/test_batches.py::TestGetBatches::test_get_batches_returns_all PASSED [ 13%]
+tests/test_batches.py::TestGetBatchById::test_get_batch_by_id PASSED     [ 14%]
+tests/test_batches.py::TestGetBatchById::test_get_batch_not_found PASSED [ 15%]
+tests/test_batches.py::TestBatchStatusTransitions::test_valid_transition_mixed_to_molded PASSED [ 15%]
+tests/test_batches.py::TestBatchStatusTransitions::test_valid_transition_molded_to_unmolded PASSED [ 16%]
+tests/test_batches.py::TestBatchStatusTransitions::test_valid_transition_unmolded_to_curing PASSED [ 17%]
+tests/test_batches.py::TestBatchStatusTransitions::test_valid_transition_curing_to_ready_cold_process PASSED [ 18%]
+tests/test_batches.py::TestBatchStatusTransitions::test_skip_stage_returns_400 PASSED [ 18%]
+tests/test_batches.py::TestBatchStatusTransitions::test_backward_transition_returns_400 PASSED [ 19%]
+tests/test_batches.py::TestBatchStatusTransitions::test_invalid_status_value_returns_400 PASSED [ 20%]
+tests/test_batches.py::TestBatchStatusTransitions::test_status_update_batch_not_found PASSED [ 21%]
+tests/test_batches.py::TestBatchStatusTransitions::test_cure_time_not_met_cold_process PASSED [ 21%]
+tests/test_batches.py::TestBatchStatusTransitions::test_cure_time_met_hot_process PASSED [ 22%]
+tests/test_batches.py::TestBatchStatusTransitions::test_cure_time_not_met_hot_process PASSED [ 23%]
+tests/test_batches.py::TestBatchStatusTransitions::test_cure_time_melt_and_pour_immediate PASSED [ 24%]
+tests/test_batches.py::TestDeleteBatch::test_delete_mixed_batch PASSED   [ 24%]
+tests/test_batches.py::TestDeleteBatch::test_delete_molded_batch PASSED  [ 25%]
+tests/test_batches.py::TestDeleteBatch::test_delete_unmolded_batch PASSED [ 26%]
+tests/test_batches.py::TestDeleteBatch::test_delete_curing_batch_returns_400 PASSED [ 27%]
+tests/test_batches.py::TestDeleteBatch::test_delete_ready_batch_returns_400 PASSED [ 27%]
+tests/test_batches.py::TestDeleteBatch::test_delete_batch_not_found PASSED [ 28%]
+tests/test_calculations.py::TestCalculateLye::test_single_oil PASSED     [ 29%]
+tests/test_calculations.py::TestCalculateLye::test_multiple_oils PASSED  [ 30%]
+tests/test_calculations.py::TestCalculateLye::test_rounding PASSED       [ 30%]
+tests/test_calculations.py::TestCalculateAdjustedLye::test_basic PASSED  [ 31%]
+tests/test_calculations.py::TestCalculateAdjustedLye::test_min_superfat PASSED [ 32%]
+tests/test_calculations.py::TestCalculateAdjustedLye::test_max_superfat PASSED [ 33%]
+tests/test_calculations.py::TestCalculateWater::test_basic PASSED        [ 33%]
+tests/test_calculations.py::TestCalculateWater::test_custom_ratio PASSED [ 34%]
+tests/test_calculations.py::TestCalculateBatchWeight::test_basic PASSED  [ 35%]
+tests/test_calculations.py::TestCalculateBatchWeight::test_with_multiplier PASSED [ 36%]
+tests/test_calculations.py::TestCalculateCostPerBar::test_basic PASSED   [ 36%]
+tests/test_calculations.py::TestCalculateCostPerBar::test_zero_bars_returns_zero PASSED [ 37%]
+tests/test_calculations.py::TestCalculateWholesaleTotal::test_single_item PASSED [ 38%]
+tests/test_calculations.py::TestCalculateWholesaleTotal::test_multiple_items PASSED [ 39%]
+tests/test_dashboard.py::TestDashboardStructure::test_dashboard_returns_200 PASSED [ 39%]
+tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_batches_by_stage PASSED [ 40%]
+tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_curing_timeline PASSED [ 41%]
+tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_inventory_levels PASSED [ 42%]
+tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_wholesale_orders PASSED [ 42%]
+tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_cost_analysis PASSED [ 43%]
+tests/test_dashboard.py::TestDashboardStructure::test_dashboard_has_revenue PASSED [ 44%]
+tests/test_dashboard.py::TestDashboardBatchesByStage::test_all_stages_zero_initially PASSED [ 45%]
+tests/test_dashboard.py::TestDashboardBatchesByStage::test_counts_mixed_batch PASSED [ 45%]
+tests/test_dashboard.py::TestDashboardCuringTimeline::test_curing_timeline_entry_fields PASSED [ 46%]
+tests/test_dashboard.py::TestDashboardCuringTimeline::test_curing_timeline_days_remaining PASSED [ 47%]
+tests/test_dashboard.py::TestDashboardCuringTimeline::test_curing_timeline_empty_when_no_curing_batches PASSED [ 48%]
+tests/test_dashboard.py::TestDashboardInventoryLevels::test_inventory_levels_count PASSED [ 48%]
+tests/test_dashboard.py::TestDashboardInventoryLevels::test_inventory_levels_has_low_stock_flag PASSED [ 49%]
+tests/test_dashboard.py::TestDashboardWholesaleOrders::test_wholesale_order_fields PASSED [ 50%]
+tests/test_dashboard.py::TestDashboardCostAnalysis::test_cost_analysis_with_batch PASSED [ 51%]
+tests/test_dashboard.py::TestDashboardCostAnalysis::test_cost_analysis_empty_without_batches PASSED [ 51%]
+tests/test_dashboard.py::TestDashboardCostAnalysis::test_cost_analysis_avg_across_multiple_batches PASSED [ 52%]
+tests/test_dashboard.py::TestDashboardRevenue::test_revenue_zero_with_no_orders PASSED [ 53%]
+tests/test_dashboard.py::TestDashboardRevenue::test_revenue_sums_all_orders PASSED [ 54%]
+tests/test_inventory.py::TestInventorySeeding::test_inventory_has_11_items PASSED [ 54%]
+tests/test_inventory.py::TestInventorySeeding::test_inventory_contains_all_sap_oils PASSED [ 55%]
+tests/test_inventory.py::TestInventorySeeding::test_inventory_contains_sodium_hydroxide PASSED [ 56%]
+tests/test_inventory.py::TestInventorySeeding::test_inventory_initial_quantity_zero PASSED [ 57%]
+tests/test_inventory.py::TestInventorySeeding::test_inventory_initial_cost_zero PASSED [ 57%]
+tests/test_inventory.py::TestGetInventory::test_get_inventory_includes_low_stock_flag PASSED [ 58%]
+tests/test_inventory.py::TestGetInventory::test_get_inventory_item_fields PASSED [ 59%]
+tests/test_inventory.py::TestUpdateInventory::test_update_inventory_quantity_and_cost PASSED [ 60%]
+tests/test_inventory.py::TestUpdateInventory::test_update_inventory_not_found PASSED [ 60%]
+tests/test_inventory.py::TestInventoryDecrement::test_oil_inventory_decremented_on_batch PASSED [ 61%]
+tests/test_inventory.py::TestInventoryDecrement::test_sodium_hydroxide_decremented_on_batch PASSED [ 62%]
+tests/test_inventory.py::TestInventoryDecrement::test_insufficient_oil_inventory_returns_400 PASSED [ 63%]
+tests/test_inventory.py::TestInventoryDecrement::test_insufficient_sodium_hydroxide_returns_400 PASSED [ 63%]
+tests/test_inventory.py::TestLowStockFlag::test_low_stock_true_when_below_recipe_requirement PASSED [ 64%]
+tests/test_inventory.py::TestLowStockFlag::test_low_stock_false_when_sufficient PASSED [ 65%]
+tests/test_inventory.py::TestLowStockFlag::test_low_stock_for_sodium_hydroxide PASSED [ 66%]
+tests/test_inventory.py::TestLowStockFlag::test_low_stock_false_no_recipes PASSED [ 66%]
+tests/test_orders.py::TestCreateOrder::test_create_order_success PASSED  [ 67%]
+tests/test_orders.py::TestCreateOrder::test_create_order_total_computation PASSED [ 68%]
+tests/test_orders.py::TestCreateOrder::test_create_order_exceeds_available_inventory PASSED [ 69%]
+tests/test_orders.py::TestCreateOrder::test_create_order_available_inventory_considers_existing_orders PASSED [ 69%]
+tests/test_orders.py::TestCreateOrder::test_create_order_no_ready_batches PASSED [ 70%]
+tests/test_orders.py::TestGetOrders::test_get_orders_empty PASSED        [ 71%]
+tests/test_orders.py::TestGetOrders::test_get_orders_returns_all PASSED  [ 72%]
+tests/test_orders.py::TestGetOrders::test_get_orders_includes_total PASSED [ 72%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_success PASSED [ 73%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_computes_total_lye PASSED [ 74%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_computes_adjusted_lye PASSED [ 75%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_computes_water PASSED [ 75%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_defaults_to_2 PASSED [ 76%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_invalid_process_type PASSED [ 77%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_cold_process_valid PASSED [ 78%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_hot_process_valid PASSED [ 78%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_melt_and_pour_valid PASSED [ 79%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_unrecognized_oil_name PASSED [ 80%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_zero_weight_oz PASSED [ 81%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_negative_weight_oz PASSED [ 81%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_superfat_below_3 PASSED [ 82%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_superfat_above_10 PASSED [ 83%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_superfat_at_3 PASSED [ 84%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_superfat_at_10 PASSED [ 84%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_below_1_5 PASSED [ 85%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_above_3 PASSED [ 86%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_at_1_5 PASSED [ 87%]
+tests/test_recipes.py::TestCreateRecipe::testcreate_recipe_water_ratio_at_3 PASSED [ 87%]
+tests/test_recipes.py::TestGetRecipes::test_get_recipes_empty PASSED     [ 88%]
+tests/test_recipes.py::TestGetRecipes::test_get_recipes_returns_all PASSED [ 89%]
+tests/test_recipes.py::TestGetRecipes::test_get_recipes_includes_computed_fields PASSED [ 90%]
+tests/test_recipes.py::TestGetRecipeById::test_get_recipe_by_id PASSED   [ 90%]
+tests/test_recipes.py::TestGetRecipeById::test_get_recipe_not_found PASSED [ 91%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_contains_exactly_10_entries PASSED [ 92%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_olive_oil PASSED [ 93%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_coconut_oil PASSED [ 93%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_palm_oil PASSED [ 94%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_shea_butter PASSED [ 95%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_castor_oil PASSED [ 96%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_sweet_almond_oil PASSED [ 96%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_avocado_oil PASSED [ 97%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_sunflower_oil PASSED [ 98%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_cocoa_butter PASSED [ 99%]
+tests/test_sap_config.py::TestSAPValues::test_sap_values_jojoba_oil PASSED [100%]
+
+=============================== warnings summary ===============================
+tests/test_batches.py: 286 warnings
+tests/test_dashboard.py: 77 warnings
+tests/test_inventory.py: 37 warnings
+tests/test_orders.py: 66 warnings
+  /eval_assets/tests/../backend/app.py:408: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    item = InventoryItem.query.get(id)
+
+tests/test_batches.py: 28 warnings
+tests/test_dashboard.py: 8 warnings
+tests/test_inventory.py: 4 warnings
+tests/test_orders.py: 6 warnings
+  /eval_assets/tests/../backend/app.py:198: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    recipe = Recipe.query.get(recipe_id) if recipe_id else None
+
+tests/test_batches.py::TestGetBatchById::test_get_batch_by_id
+tests/test_batches.py::TestGetBatchById::test_get_batch_not_found
+  /eval_assets/tests/../backend/app.py:272: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    batch = Batch.query.get(id)
+
+tests/test_batches.py: 41 warnings
+tests/test_dashboard.py: 14 warnings
+tests/test_orders.py: 24 warnings
+  /eval_assets/tests/../backend/app.py:279: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    batch = Batch.query.get(id)
+
+tests/test_batches.py: 6 warnings
+tests/test_dashboard.py: 2 warnings
+tests/test_orders.py: 6 warnings
+  /eval_assets/tests/../backend/app.py:297: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    recipe = Recipe.query.get(batch.recipe_id)
+
+tests/test_batches.py::TestDeleteBatch::test_delete_mixed_batch
+tests/test_batches.py::TestDeleteBatch::test_delete_molded_batch
+tests/test_batches.py::TestDeleteBatch::test_delete_unmolded_batch
+tests/test_batches.py::TestDeleteBatch::test_delete_curing_batch_returns_400
+tests/test_batches.py::TestDeleteBatch::test_delete_ready_batch_returns_400
+tests/test_batches.py::TestDeleteBatch::test_delete_batch_not_found
+  /eval_assets/tests/../backend/app.py:318: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    batch = Batch.query.get(id)
+
+tests/test_dashboard.py::TestDashboardCuringTimeline::test_curing_timeline_entry_fields
+tests/test_dashboard.py::TestDashboardCuringTimeline::test_curing_timeline_days_remaining
+  /eval_assets/tests/../backend/app.py:435: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    recipe = Recipe.query.get(batch.recipe_id)
+
+tests/test_recipes.py::TestGetRecipeById::test_get_recipe_by_id
+tests/test_recipes.py::TestGetRecipeById::test_get_recipe_not_found
+  /eval_assets/tests/../backend/app.py:186: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    recipe = Recipe.query.get(id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+====================== 133 passed, 617 warnings in 5.72s =======================
+Generated /app/results.json
